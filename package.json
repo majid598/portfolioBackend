@@ -8,6 +8,6 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "build": "run build"
+    "build": "npm run build"
   }
 }
