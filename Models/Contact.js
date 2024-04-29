@@ -11,7 +11,7 @@ const Schema = new mongoose.Schema({
     required: true,
     validate: [validator.isEmail],
   },
-  phone: {
+  subject: {
     type: String,
     required: true,
   },
