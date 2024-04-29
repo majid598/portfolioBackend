@@ -4,14 +4,14 @@ const Router = express.Router();
 
 Router.post("/contact", async (req, res, next) => {
   const { name, email, phone, message } = req.body;
-  console.log(name, email, phone, message);
+  console.log(name, email, subject, message);
   if (!name) {
     return res.status(400).json({
       success: false,
       message: "Please Add Name To Contact",
     });
   }
-  if (!email || !phone) {
+  if (!email || !subject) {
     return res.status(400).json({
       success: false,
       message: "Please Add All Fields",
@@ -26,7 +26,7 @@ Router.post("/contact", async (req, res, next) => {
   await Contact.create({
     name,
     email,
-    phone,
+    subject,
     message,
   });
   res.status(200).json({
