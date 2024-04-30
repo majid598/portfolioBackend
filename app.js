@@ -7,6 +7,7 @@ const cors = require('cors')
 app.use( cors({
     origin: [
       "http://localhost:3000",
+        "https://portfolio-nine-snowy-67.vercel.app"
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
