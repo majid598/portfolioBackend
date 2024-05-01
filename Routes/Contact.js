@@ -43,7 +43,7 @@ Router.get("/contact/all", async (req, res) => {
       success: false,
       message: "You not owner",
     });
-  const messages = await Contact.find();
+  const messages = await Contact.find().sort({ createdAt: -1 });
   return res.status(200).json({
     success: true,
     messages,
