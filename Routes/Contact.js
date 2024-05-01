@@ -1,5 +1,5 @@
 const express = require("express");
-const Contact = require('../Models/Contact')
+const Contact = require("../Models/Contact");
 const Router = express.Router();
 
 Router.post("/contact", async (req, res, next) => {
@@ -32,6 +32,21 @@ Router.post("/contact", async (req, res, next) => {
   res.status(200).json({
     success: true,
     message: "Thanks For Contact Me",
+  });
+});
+
+Router.get("/contact/all", async (req, res) => {
+  const key = req.query.key;
+  const myKey = "code_with_raju";
+  if (key !== myKey)
+    return res.status(404).json({
+      success: false,
+      message: "You not owner",
+    });
+  const messages = await Contact.find();
+  return res.status(200).json({
+    success: true,
+    messages,
   });
 });
 
