@@ -9,7 +9,7 @@ app.use(
     origin: [
       "http://localhost:3000",
       "http://localhost:5173",
-      "https://portfolio-nine-snowy-67.vercel.app",
+      "https://contact-form-olive-sigma.vercel.app",
       "https://codewithraju.vercel.app",
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
