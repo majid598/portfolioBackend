@@ -8,6 +8,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
+      "http://localhost:5173",
       "https://portfolio-nine-snowy-67.vercel.app",
       "https://codewithraju.vercel.app",
     ],
