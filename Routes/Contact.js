@@ -8,19 +8,19 @@ Router.post("/contact", async (req, res, next) => {
   if (!name) {
     return res.status(400).json({
       success: false,
-      message: "Please Add Name To Contact",
+      message: "Please enter name to contact",
     });
   }
   if (!email || !subject) {
     return res.status(400).json({
       success: false,
-      message: "Please Add All Fields",
+      message: "All fields are required",
     });
   }
   if (!message) {
     return res.status(400).json({
       success: false,
-      message: "Please Enter Your Concern",
+      message: "Please enter your message",
     });
   }
   await Contact.create({
